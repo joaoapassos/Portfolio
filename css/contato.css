@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@420;700&display=swap');
+:root{
+    --preto: #111111;
+    --branco: #f5f5f5;
+    --cinza: #a7a7a7;
+    --vermelho: #e16969;
+    --font: 'Rubik', sans-serif;
+    --bold: 700;
+    --regular:400;
+}
+*, *:before, *:after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+body{
+    position: absolute;
+    color: var(--preto);
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Titulo **********************************************************/
+.obrigado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.obrigado a{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+.obrigado a:hover{
+   color: var(--vermelho);
+}
+.Titulo{
+    position: relative;
+    padding-top: 1rem;
+    left: 2rem;
+}
+
+.subtitulo{
+    font-size: 1.5rem;
+}
+
+/* Formulario *****************************************************/
+
+.areaForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.formulario form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--branco);
+    box-shadow: 5px 5px 5px var(--cinza);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.formControl{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+.labelForm{
+    padding: 0.2rem;
+    padding-bottom: 0.7rem;
+}
+.nome, .email{
+    padding: 1rem;
+    min-height: 2.5rem;
+    border-radius: 10px;
+    border: 1.5px solid var(--preto);
+}
+
+.mensagem{
+    padding: 1rem;
+    min-height: 12rem;
+    border-radius: 15px;
+    border: 1.5px solid var(--preto);
+    resize: vertical;
+}
+input{
+    padding-left: 1rem;
+}
+textarea{
+    padding-top: 0.7rem;
+    padding-left: 1rem;
+}
+
+.btn_enviar{
+    margin: 0rem 1rem 2rem 1rem;
+    width: 40vw;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid var(--preto);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.btn_enviar::-ms-value{
+    color: var(--preto);
+    font-weight: var(--bold);
+    font-size: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn_enviar:hover{
+    color: var(--branco);
+}
+
+.btn_enviar:hover{
+    background-color: var(--preto);
+    border-radius: 10px;
+}
+
+
+/* ERRO ****************************************************/
+
+.email.erro, .nome.erro, .mensagem.erro{
+    border: 2px solid var(--vermelho);
+    outline: none;
+}
+.email.erro::placeholder, .nome.erro::placeholder, .mensagem.erro::placeholder{
+    color: var(--vermelho);
+}
+
+#erros{
+    color: var(--vermelho);
+    padding: 0.2rem 0.5rem;
+}
+/* Responsividade ******************************************/
+
+@media screen and (max-width: 768px) {
+    .subtitulo{
+        font-size: 1.2rem;
+    }
+
+    .btn_enviar {
+        width: 70vw;
+        border-radius: 10px;
+        background-color: var(--preto);
+    }
+    .btn_enviar:hover {
+        background-color: var(--preto);
+    }
+    .btn_enviar p{
+        color: var(--branco);
+    }
+    .btn_enviar:hover p{
+        color: var(--branco);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .obrigado{
+        justify-content: baseline;
+        height: 100vmin;
+    }
+    .subtitulo, .obrigado a{
+        font-size: 4vw;
+    }
+    .obrigado a:hover{
+        color: var(--preto);
+    }
+    .btn_enviar {
+        width: 90vw;
+        border-radius: 10px;
+    }
+
+    .formulario form{
+        box-shadow: none;
+        overflow: hidden;
+    }
+}

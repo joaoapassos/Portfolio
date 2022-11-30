@@ -1,0 +1,7 @@
+1 - verificar se tem algo escrito se não tiver ele bloqueara o botão;
+
+2 - depois se ele verificar que uma das tem algum valor ele vai fazer outra ação, ele vai verificar se tem alguma que esta fazia se tiver ele vai apontar o erro e o botão ainda vai esta desativado
+
+3 - depois caso tudo esteja preenchido ele vai verificar se o email e valido, caso não seja ele aponta o erro e o botão ainda ficará desativado
+
+4 - se tudo estiver certo o botão não será desativado

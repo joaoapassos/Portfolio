@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@420;700&display=swap');
+:root{
+    --preto: #111111;
+    --branco: #f5f5f5;
+    --cinza: #a7a7a7;
+    --vermelho: #e16969;
+    --font: 'Rubik', sans-serif;
+    --bold: 700;
+    --regular:400;
+}
+*, *:before, *:after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+body{
+    color: var(--preto);
+    background-color: var(--branco);
+    overflow-x: hidden;
+}
+
+/* Footer ********************************************************************************************/
+
+footer {
+    background-color: var(--preto);
+    position: relative;
+    top: 10vh;
+    height: 60vh;
+    width: 100vmax;
+    display: grid;
+    grid-template-areas: 
+    'contato links'
+    'footer footer';
+
+}
+.SobreContato{
+    color: var(--branco);
+    position: relative;
+    grid-area: contato;
+    width: 40vmax;
+    height: 50vh;
+    left: 2rem;
+    top: 2rem;
+}
+.SobreContato h2{
+    font-weight: var(--bold);
+    font-size: 2rem;
+}
+.SobreContato p{
+    position: relative;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+    width: 35vmax;
+    top: 0.5rem;
+}
+.SobreContato a{
+    position: relative;
+    text-decoration: none;
+    top: 0.5rem;
+    font-weight: var(--regular);
+}
+.SobreContato a p{
+    color: var(--branco);
+    padding-bottom: 10px;
+    transition: 0.7s ease-in-out;
+}
+.SobreContato a p:hover{
+    text-decoration:underline;
+}
+
+
+.segueAi{
+    position: relative;
+    grid-area: links;
+    height: 50vh;
+    color: var(--branco);
+    top: 2rem;
+}
+.segueAi h2{
+    font-weight: var(--bold);
+    font-size: 2rem;
+}
+.redesSociais{
+    position: relative;
+    top: 1rem;
+}
+.instagram a{
+
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    text-decoration: none;
+    padding-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.instagram h3{
+    position: relative;
+    left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.instagram a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.behance a{
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    text-decoration: none;
+    padding-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.behance h3{
+    position: relative;
+    left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.behance a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.linkedin a{
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    text-decoration: none;
+    padding-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.linkedin h3{
+    position: relative;
+    left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.linkedin a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+
+.DireitoAutorais{
+    position: relative;
+    grid-area: footer;
+    bottom: 2rem;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+.DireitoAutorais p{
+    position: relative;
+    color: var(--cinza);
+    left: 0.5rem;
+}
+.IconeLogo{
+    stroke:var(--cinza);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.IconeLogo:hover{
+    stroke: var(--vermelho);
+}

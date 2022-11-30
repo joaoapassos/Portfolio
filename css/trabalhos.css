@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@420;700&display=swap');
+:root{
+    --preto: #111111;
+    --branco: #f5f5f5;
+    --cinza: #a7a7a7;
+    --vermelho: #e16969;
+    --font: 'Rubik', sans-serif;
+    --bold: 700;
+    --regular:400;
+}
+*, *:before, *:after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+body::-webkit-scrollbar {
+    width: 5px;
+  }
+body::-webkit-scrollbar-track{
+    background-color: rgb(230, 230, 230);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(129, 129, 129);
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: var(--vermelho);
+}
+body{
+    color: var(--preto);
+    background-color: var(--branco);
+    overflow-x: hidden;
+}
+
+/*Apresentação 1 **********************************************************/
+
+.APRESENTACAO{
+    position: absolute;
+    background-color: var(--preto);
+    color: var(--branco);
+    width: 100vw;
+}
+
+.logo{
+    position: relative;
+    left: 2vw;
+    top: 1vw;
+}
+.titularidade{
+    position: relative;
+    top: -0.5rem;
+    left: 0.5rem;
+    font-weight: var(--regular);
+}
+#Background-logo{
+    stroke: var(--branco)!important;
+    width:1810.5179px;
+    animation: none;
+}
+#nome-logo{
+    animation: none;
+    fill: var(--branco);
+}
+
+.apresentacao{
+    position: relative;
+    margin: 1vw 0;
+}
+
+.descricao{
+    position: relative;
+    margin: 1.5vw 4.5vw;
+}
+.imagens{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagens img{
+    position: relative;
+    height: 60vw;
+    margin: 0.5vw 0;
+}
+a{
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.7s;
+}
+.voltar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw 0 1.5vw 0;
+    font-size: 1.6rem;
+    height: 3rem;
+    width: 84.2vw;
+    font-weight: var(--bold);
+    border: 2px solid var(--branco);
+    cursor: pointer;
+    transition: 0.7s;
+    }
+.voltar:hover{
+    background-color: var(--branco);
+    color: var(--preto);
+    border-radius: 1.4vw;
+}
+.voltar:hover a{
+    color: var(--preto);
+}
+.sair{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    right: 5vw;
+    top: 4vw;
+}
+.x1{
+    position: absolute;
+    background-color: var(--cinza);
+    width: 35px;
+    height: 5px;
+    transform: rotate(45deg);
+}
+.x2{
+    background-color: var(--cinza);
+    width: 35px;
+    height: 5px;
+    transform: rotate(-45deg);
+}
+.sair:hover{
+    animation: sairAnime  1s infinite forwards alternate cubic-bezier(.84,-0.38,.74,1.68);
+    transition: 0.5s;
+}
+@keyframes sairAnime {
+    0% {
+
+        transform: rotate(0deg);
+    }
+
+    100% {
+
+        transform: rotate(180deg);
+    }
+}
+@media screen and (max-width: 768px){
+    .voltar:hover{
+        background-color: transparent;
+        color: var(--branco);
+        border-radius: 0vw;
+    }
+}

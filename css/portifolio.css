@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@420;700&display=swap');
+:root{
+    --preto: #111111;
+    --branco: #f5f5f5;
+    --cinza: #a7a7a7;
+    --vermelho: #e16969;
+    --font: 'Rubik', sans-serif;
+    --bold: 700;
+    --regular:400;
+}
+*, *:before, *:after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+body::-webkit-scrollbar {
+    width: 5px;
+  }
+body::-webkit-scrollbar-track{
+    background-color: rgb(230, 230, 230);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(129, 129, 129);
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: var(--vermelho);
+}
+body{
+    position: absolute;
+    color: var(--preto);
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.titulo{
+    font-size: 2.7rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    color: var(--preto);
+}
+
+/* Previa Sobre Mim ******************************************************************************/
+
+.previa-sobreMim{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: -5rem;
+}
+
+.fotinha img{
+    position: relative;
+    right: 5vw;
+    margin-left: 1rem;
+    height: 55vw;
+    pointer-events: none;
+    animation: euMeMovo 1s infinite alternate ease-in-out;
+}
+@keyframes euMeMovo {
+    0%{
+        top: -2rem;
+    }
+    100%{
+        top: 2rem;
+    }
+}
+.texto-sobreMim{
+    position: relative;
+    right: 5vw;
+}
+.conteudoPrevia{
+    position: relative;
+    width: 50vw;
+}
+.conteudoPrevia p{
+    font-size: 2.5vw;
+}
+#salve{
+    position: relative;
+    font-weight: var(--bold);
+    color: var(--vermelho);
+    text-shadow: 
+    -0.1vmax -0.1vmax 0vmax var(--preto), 
+    -0.1vmax 0.1vmax 0vmax var(--preto),                    
+    0.1vmax -0.1vmax 0vmax var(--preto),                  
+    0.1vmax 0.1vmax 0vmax var(--preto);
+    font-size: 3.6vw;
+}
+#EuMemo{
+    position: relative;
+    top: -3.2vw;
+    left: 14.5vw;
+    font-size:  2.5vw;
+}
+
+/* Area de Projetos *****************************************************************************/
+
+.areaProjeto{
+    position: relative;
+    width: 100vw;
+    top: -7rem;
+}
+
+.tituloProjetos{
+    position: relative;
+    left: 4vw;
+    margin-bottom: 2rem;
+}
+.tituloProjetos p{
+    font-size: 2vw;
+    font-weight: var(--regular);
+}
+
+.Projetos{
+    position: relative;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    top: 6rem;
+}
+
+.projeto1{
+    background-image: url(../img/The-wave.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    margin-bottom: 5vw;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.projeto1 p{
+    position: relative;
+    display: flex;
+    top: 16.5rem;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+.projeto2{
+    background-image: url(../img/isell.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    margin-bottom: 5vw;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.projeto2 p{
+    position: relative;
+    display: flex;
+    top: 16.5rem;
+    justify-content: center;
+    font-size: 1.5vw;
+    color: var(--branco);
+}
+.projeto3{
+    background-image: url(../img/em-breve.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    margin-bottom: 5vw;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.projeto3 p{
+    color: var(--branco);
+    font-size: 3vw;
+    font-weight: var(--bold);
+}
+
+.overlay{
+    position: relative;
+    background-color:#e1696993;
+    height: 330px;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    top: -2rem;
+    transition: 0.7s;
+}
+.viewMore{
+    border: 2px solid var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 13rem;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.viewMore h3{
+    font-size: 2rem;
+    color: var(--branco);
+    transition: 0.7s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.viewMore:hover{
+    background-color: var(--branco);
+    border-radius: 25px;
+}
+.viewMore:hover h3{
+    color: #e16969;
+}
+
+/* Chamada para Contato *****************************************/
+
+.chamadaPcontato{
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.chamadaPcontato p{
+    font-size: 2rem;
+    margin-bottom: 1vw;
+}
+
+.tracoLink{
+        display: block;
+        background-color: transparent;
+        width: 0;
+        height: 0.5vw;
+    }
+    
+.Bora:hover .tracoLink{
+    display: block;
+    height: 0.5vw;
+    width: 0;
+    animation: tracoDoLink 0.7s forwards ease-in-out;
+}
+@keyframes tracoDoLink {
+    0%{
+        width: 0;
+        background-color: var(--vermelho);
+    }
+    100%{
+        width: 100%;
+        background-color: var(--vermelho);
+    }
+}
+
+/* Footer ***********************************************************/
+
+footer {
+    margin-top: 5rem;
+    background-color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Contato{
+    margin-top: 1.5rem;
+    margin-left: 2vw;
+    display: flex;
+}
+.Contato, .Contato a{
+    color: var(--branco);
+}
+.Sobre{
+    width: 50vw;
+}
+
+.titulo2{
+    font-size: 2.2rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+}
+.Sobre a{
+    transition: 0.5s;
+}
+.Sobre a:hover{
+    color: var(--vermelho);
+}
+.Sobre p{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: var(--regular);
+}
+
+.segueAi{
+    margin-left: 10vw
+}
+
+.redesSociais{
+    margin-top: 1.5rem;
+}
+
+.instagram a{
+
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.instagram h3{
+    margin-left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.instagram a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.behance a{
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.behance h3{
+    margin-left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.behance a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.linkedin a{
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.linkedin h3{
+    margin-left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.linkedin a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.DireitosAutorais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--cinza);
+}
+.DireitosAutorais svg{
+    margin-right: 1rem;
+    stroke: var(--cinza);
+    transition: 0.5s;
+}
+.DireitosAutorais svg:hover{
+    stroke: var(--vermelho);
+}
+
+/* Parte de responsividade ***********************************************/
+
+@media screen and (max-width: 990px) {
+
+    .titulo{
+        font-size: 2.3rem;
+    }
+    .text p{
+        font-size: 1.5rem;
+    }
+
+    .software h3{
+        font-size: 1.7rem;
+    }
+    .chamadaPcontato p{
+        font-size: 1.5rem;
+    }
+    .titulo2{
+        font-size: 2rem;
+    }
+    .Sobre p{
+        font-size: 1.3rem;
+    }
+    .DireitosAutorais p{
+        font-size: 1rem;
+    }
+    .IconeLogo{
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #salve{
+        font-size: 4vw;
+    }
+    #EuMemo{
+        top: -0.5vw;
+        left: 0vw;
+        font-size:  3vw;
+    }
+    .conteudoPrevia p{
+        font-size: 2.7vw;
+    }
+    .fotinha img{
+        animation: none;
+    }
+
+
+    .areaProjeto{
+        top: 0;
+    }
+    .tituloProjetos{
+        margin-bottom: 0;
+    }
+    .tituloProjetos p{
+       font-size: 1.5rem;
+    }
+    .Projetos{
+        grid-template-columns: 45vw 45vw;
+        pointer-events: all;
+    }
+
+    .Projetos p{
+        font-size: 2.5vw;
+    }
+    .projeto1, .projeto2, .projeto3{
+        margin: 0;
+    }
+    .projeto3 p{
+        font-size: 4.5vw;
+    }
+    .projeto3{
+        margin-bottom: 8rem;
+    }
+    
+    .overlay{
+        display: none;
+    }
+    .link{
+        background-color: #a7a7a700;
+        height: 300px;
+    }
+
+    .titulo{
+        font-size: 2.5rem;
+    }
+    .text p{
+        font-size: 1.2rem;
+    }
+
+    .software h3{
+        font-size: 1.4rem;
+    }
+    .chamadaPcontato p{
+        font-size: 1.2rem;
+    }
+    .Bora:hover .tracoLink{
+        animation: none;
+    }
+    .titulo2{
+        font-size: 1.7rem;
+    }
+    .Sobre p{
+        font-size: 1rem;
+    }
+    .redesSociais h3{
+        font-size: 1rem;
+    }
+    .DireitosAutorais p{
+        font-size: 0.8rem;
+    }
+    .IconeLogo{
+        height: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    section.previa-sobreMim{
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+    }
+    .texto-sobreMim{
+        margin-top: -10vmax;
+    }
+    .conteudoPrevia{
+        width: 90%;
+    }
+    .conteudoPrevia p{
+        font-size: 5vw;
+    }
+
+    #salve{
+        font-size: 8vw;
+        margin-left: 2rem;
+        text-shadow: 
+    -0.18vmax -0.18vmax 0vmax var(--preto), 
+    -0.18vmax 0.18vmax 0vmax var(--preto),                    
+    0.18vmax -0.18vmax 0vmax var(--preto),                  
+    0.18vmax 0.18vmax 0vmax var(--preto);
+    }
+    #EuMemo{
+        font-size: 5vw;
+        margin-left: 2rem;
+    }
+    .titulo{
+        font-size: 8vw;
+    }
+    .fotinha img{
+        height: 90vw;
+        margin-right: -2rem;
+    }
+    .conteudoPrevia{
+        margin: 1rem 0;
+        margin-left: 2rem;
+        width: 90vw;
+    }
+    .conteudoPrevia p{
+        font-size: 5vw;
+    }
+
+    .areaProjeto{
+        top: 0;
+    }
+    .tituloProjetos{
+        margin-bottom: 0;
+    }
+    .tituloProjetos p{
+       font-size: 1.5rem;
+    }
+    .Projetos{
+        grid-template-columns: 90vw;
+        pointer-events: all;
+    }
+
+    .Projetos p{
+        font-size: 4vw;
+        top: 28rem;
+    }
+    .projeto1, .projeto2, .projeto3{
+        margin: 0;
+        height: 500px;
+    }
+    .projeto3 p{
+        font-size: 8vw;
+    }
+    .projeto3{
+        margin-bottom: 8rem;
+    }
+
+    .chamadaPcontato{
+        align-items: baseline;
+        margin-left: 5vw;
+    }
+    .Bora:hover .tracoLink{
+        animation: none;
+    }
+
+
+    .Contato{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    .titulo2{
+        font-size: 5vw;
+    }
+
+    .Sobre{
+        width: 90vw;
+    }
+    .Sobre p {
+        font-size: 5vw;
+    }
+
+    .segueAi{
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .redesSociais{
+        display: flex;
+    }
+
+    .redesSociais h3{
+        display: none;
+    }
+    .instagram a svg{
+        height: 8vw;
+        margin-right: 1rem;
+    }
+    .instagram a:hover{
+        color: var(--branco);
+        stroke: var(--branco);
+    }
+    .behance a svg{
+        height: 8vw;
+        margin-right: 1rem;
+    }
+    .behance a:hover{
+        color: var(--branco);
+        stroke: var(--branco);
+    }
+    .linkedin a svg{
+        height: 8vw;
+    }
+    .linkedin a:hover{
+        color: var(--branco);
+        stroke: var(--branco);
+    }
+
+    .DireitosAutorais{
+        margin-top: 2rem;
+    }
+    .DireitosAutorais svg{
+        margin: 0;
+        margin-right: 0.3rem;
+        height: 10vw;
+    }
+    .DireitosAutorais p{
+        font-size: 5vw;
+    }
+}

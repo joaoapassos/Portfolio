@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@420;700&display=swap');
+:root{
+    --preto: #111111;
+    --branco: #f5f5f5;
+    --cinza: #a7a7a7;
+    --vermelho: #e16969;
+    --font: 'Rubik', sans-serif;
+    --bold: 700;
+    --regular:400;
+}
+*, *:before, *:after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+body::-webkit-scrollbar {
+    width: 5px;
+  }
+body::-webkit-scrollbar-track{
+    background-color: rgb(230, 230, 230);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(129, 129, 129);
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: var(--vermelho);
+}
+body{
+    position: absolute;
+    color: var(--preto);
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.titulo{
+    font-size: 2.7rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+}
+
+/*Sobre mim **************************************/
+section.sobre{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.fotinha img{
+    position: relative;
+    right: 5vw;
+    margin-left: 1rem;
+    height: 55vw;
+    pointer-events: none;
+}
+.text{
+    position: relative;
+    right: 3vw;
+    width: 50vw;
+}
+.text p{
+    font-size: 2rem;
+}
+
+/* Habilidades *************************************/
+
+section.habilidades{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 3vw;
+}
+
+.software{
+    display: flex;
+    margin: 3vw 1vw;
+}
+a{
+    text-decoration: none;
+    color: var(--preto);
+}
+.krita svg{
+    padding-right: 1vw;
+}
+.krita a{
+    stroke:var(--preto);
+    padding-right: 2vw;
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+.krita:hover a{
+    stroke: var(--vermelho);
+    color: var(--vermelho);
+}
+.inkscape svg{
+    padding-right: 1vw;
+}
+.inkscape a{
+    stroke: var(--preto);
+    fill:var(--preto);
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+.inkscape:hover a{
+    stroke: var(--vermelho);
+    fill: var(--vermelho);
+    color: var(--vermelho);
+}
+
+/* Chamada para Contato *****************************************/
+
+.chamadaPcontato{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.chamadaPcontato p{
+    font-size: 2rem;
+    margin-bottom: 1vw;
+}
+
+.tracoLink{
+        display: block;
+        background-color: transparent;
+        width: 0;
+        height: 0.5vw;
+    }
+    
+.Bora:hover .tracoLink{
+    display: block;
+    height: 0.5vw;
+    width: 0;
+    animation: tracoDoLink 0.7s forwards ease-in-out;
+}
+@keyframes tracoDoLink {
+    0%{
+        width: 0;
+        background-color: var(--vermelho);
+    }
+    100%{
+        width: 100%;
+        background-color: var(--vermelho);
+    }
+}
+
+/* Footer ***********************************************************/
+
+footer {
+    margin-top: 5rem;
+    background-color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Contato{
+    margin-top: 1.5rem;
+    margin-left: 2vw;
+    display: flex;
+}
+.Contato, .Contato a{
+    color: var(--branco);
+}
+.Sobre{
+    width: 50vw;
+}
+
+.titulo2{
+    font-size: 2.2rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+}
+.Sobre a{
+    transition: 0.5s;
+}
+.Sobre a:hover{
+    color: var(--vermelho);
+}
+.Sobre p{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: var(--regular);
+}
+
+.segueAi{
+    margin-left: 10vw
+}
+
+.redesSociais{
+    margin-top: 1.5rem;
+}
+
+.instagram a{
+
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.instagram h3{
+    margin-left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.instagram a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.behance a{
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.behance h3{
+    margin-left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.behance a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.linkedin a{
+    stroke:var(--branco);
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.linkedin h3{
+    margin-left: 0.5rem;
+    font-weight: var(--regular);
+    font-size: 1.2rem;
+}
+.linkedin a:hover{
+    color: var(--vermelho);
+    stroke: var(--vermelho);
+}
+
+.DireitosAutorais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--cinza);
+}
+.DireitosAutorais svg{
+    margin-right: 1rem;
+    stroke: var(--cinza);
+    transition: 0.5s;
+}
+.DireitosAutorais svg:hover{
+    stroke: var(--vermelho);
+}
+
+/* Parte de responsividade ***********************************************/
+
+@media screen and (max-width: 990px) {
+    .titulo{
+        font-size: 2.3rem;
+    }
+    .text p{
+        font-size: 1.5rem;
+    }
+
+    .software h3{
+        font-size: 1.7rem;
+    }
+    .chamadaPcontato p{
+        font-size: 1.5rem;
+    }
+    .titulo2{
+        font-size: 2rem;
+    }
+    .Sobre p{
+        font-size: 1.3rem;
+    }
+    .DireitosAutorais p{
+        font-size: 1rem;
+    }
+    .IconeLogo{
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .titulo{
+        font-size: 1.8rem;
+    }
+    .text p{
+        font-size: 1.2rem;
+    }
+
+    .software h3{
+        font-size: 1.4rem;
+    }
+    .chamadaPcontato p{
+        font-size: 1.2rem;
+    }
+    .titulo2{
+        font-size: 1.7rem;
+    }
+    .Sobre p{
+        font-size: 1rem;
+    }
+    .redesSociais h3{
+        font-size: 1rem;
+    }
+    .DireitosAutorais p{
+        font-size: 0.8rem;
+    }
+    .IconeLogo{
+        height: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titulo{
+        font-size: 8vw;
+    }
+    section.sobre{
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -5rem;
+    }
+    .fotinha img{
+        height: 90vw;
+        margin-right: -2rem;
+    }
+    .text{
+        bottom: 2.5rem;
+        left: 0.5rem;
+        width: 90%;
+    }
+    .text p{
+        font-size: 5vw;
+    }
+
+    section.habilidades{
+        left: 5vw;
+    }
+    .software h3{
+        font-size: 6vw;
+    }
+
+    .chamadaPcontato{
+        align-items: baseline;
+        margin-left: 5vw;
+    }
+    .Bora:hover .tracoLink{
+        animation: none;
+    }
+
+
+    .Contato{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    .titulo2{
+        font-size: 5vw;
+    }
+
+    .Sobre{
+        width: 90vw;
+    }
+    .Sobre p {
+        font-size: 5vw;
+    }
+
+    .segueAi{
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .redesSociais{
+        display: flex;
+    }
+
+    .redesSociais h3{
+        display: none;
+    }
+    .instagram a svg{
+        height: 8vw;
+        margin-right: 1rem;
+    }
+    .instagram a:hover{
+        color: var(--branco);
+        stroke: var(--branco);
+    }
+    .behance a svg{
+        height: 8vw;
+        margin-right: 1rem;
+    }
+    .behance a:hover{
+        color: var(--branco);
+        stroke: var(--branco);
+    }
+    .linkedin a svg{
+        height: 8vw;
+    }
+    .linkedin a:hover{
+        color: var(--branco);
+        stroke: var(--branco);
+    }
+
+    .DireitosAutorais{
+        margin-top: 2rem;
+    }
+    .DireitosAutorais svg{
+        margin: 0;
+        margin-right: 0.3rem;
+        height: 10vw;
+    }
+    .DireitosAutorais p{
+        font-size: 5vw;
+    }
+}

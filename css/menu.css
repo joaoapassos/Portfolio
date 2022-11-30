@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+:root{
+    --preto: #111111;
+    --branco: #f5f5f5;
+    --cinza: #a7a7a7;
+    --vermelho: #e16969;
+    --font: 'Rubik', sans-serif;
+    --bold: 700;
+    --regular:400;
+}
+*, *:before, *:after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    background-color: var(--branco);
+    width: 100vw;
+}
+
+/* esquerda do header*/
+
+header{
+    height: 17vh;
+    background-color: var(--branco);
+    display: block;
+}
+header .logo{
+    z-index: 1;
+    position: absolute;
+    left: 2rem;
+    top: 0.5rem;
+}
+
+header .logo .titularidade{
+    position: relative;
+    font-family: var(--font);
+    font-weight: var(--regular);
+    top: -0.7rem;
+    left: 0.7rem;
+}
+
+/*edicao da logo*/
+
+/*Background da logo*/
+.logo-svg{
+    height: 4rem;
+}
+#Background-logo{
+       fill:var(--preto);
+       fill-opacity:1;
+       stroke: var(--preto);
+       stroke-width: 1rem;
+       width:365.66165px;
+       height:365.66165px;
+       stroke-linecap:round;
+       stroke-linejoin:round;
+       animation: BackLogo 0.9s 0.5s forwards cubic-bezier(.77,.66,.33,.84);
+}
+/*Icone da logo*/
+#icone-logo{
+    display:inline;
+    fill:var(--vermelho);
+    fill-opacity:1;
+    stroke:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-dasharray:none;
+    stroke-opacity:1
+}
+/*Nome meu logo*/
+#nome-logo{
+    display:inline;
+    fill:transparent;
+    animation: NomeLogo 1s 0.5s forwards ease-in-out;
+    transition: 500ms;
+}
+@keyframes BackLogo {
+    from{
+        width: 365.66165px;
+    }
+    to{
+        width:1810.5179px;
+    }
+}
+@keyframes NomeLogo {
+
+    100%{
+        fill:var(--branco);
+    }
+}
+.logo-svg:hover #nome-logo{
+    fill: var(--vermelho);
+    animation: NomeLogo 1ms;
+}
+.logoaltera{
+    stroke: var(--branco)!important;
+}
+.titularidadeAltera{
+    color: var(--branco) !important;
+}
+/* Direita do header*/
+
+
+
+
+.menufixo{
+    z-index: 1;
+    position:fixed;
+    width: 100%;
+    right: 0;
+}
+header .menu{
+    z-index: 1;
+    height: 3rem;
+    width: 8rem;
+    position: absolute;
+    top: 1rem;
+    right: 2vh;
+    font-family: var(--font);
+    cursor:pointer;
+}
+
+.hamburguer{
+    position: absolute;
+    background-color: var(--preto);
+    display: block;
+    width: 35px;
+    height: 5px;
+    top: 1.2rem;
+    right: 0.5rem;
+    transition: 1s;
+}
+
+#hamburguer1, #hamburguer2, #hamburguer3{
+        background-color: var(--preto);
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: 50ms;
+}
+
+#hamburguer1{
+    top: 0.6rem;
+}
+#hamburguer3{
+    top: -0.6rem;
+}
+
+header .menu #menu-texto{
+    position:absolute ;
+    top: 0.55rem;
+    left: 0.4rem;
+    font-weight: var(--bold);
+}
+.menu{
+    transition: 1s;
+}
+#menu-texto{
+    transition: 50ms;
+    color: var(--preto);
+}
+.menualtera{
+    left: 1rem !important;
+    color: var(--cinza) !important;
+}
+
+
+
+ .menu:hover #hamburguer2{
+    background-color: var(--vermelho);
+}
+ .menu:hover #hamburguer1{
+    background-color: var(--vermelho);
+    top: 0.8rem;
+}
+ .menu:hover #hamburguer3{
+    background-color: var(--vermelho);
+    top: -0.8rem;
+}
+ .menu:hover #menu-texto{
+    color: var(--vermelho);
+    position: absolute;
+}
+.hamburguerAnime{
+    animation: humburguerAnime 1s alternate forwards cubic-bezier(1,.01,.72,.97);
+}
+
+.BarraAnimationOpen{
+    animation: barra 1s alternate forwards cubic-bezier(1,.01,.72,.97);
+    
+}
+.BarraAfterAnimationOpen{
+    animation: barraAfter 0.7s alternate forwards cubic-bezier(1,.01,.72,.97);
+    
+}
+.BarraBeforeAnimationOpen{
+    animation: barraBefore 0.7s alternate forwards cubic-bezier(1,.01,.72,.97);
+    
+}
+
+@keyframes humburguerAnime {
+    0%{background-color: var(--cinza)}
+    50%{
+        transform: rotate(-90deg);
+        background-color: var(--cinza)
+    }
+    80%{
+        transform: rotate(-45deg);
+        background-color: var(--cinza)
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+    @keyframes barra {
+        0%{background-color: var(--cinza)}
+        100%{
+            transform: rotate(0deg);
+            background-color: var(--cinza)
+         
+        }
+    }
+    @keyframes barraAfter {
+        0%{background-color: var(--cinza)}
+        10%{
+            
+            transform: translateY(15px);
+            top: 0;
+            background-color: var(--cinza);
+        }
+        70%{
+            background-color: var(--cinza);
+            transform: translateY(0);
+        }
+        100%{
+            
+            top: 0;
+            transform: rotate(-90deg);
+            background-color: var(--cinza)
+        }
+    }
+    @keyframes barraBefore{
+        0%{background-color: var(--cinza)}
+        10%{
+            background-color: var(--cinza);
+            transform: translateY(-15px);
+            top: 0;
+        }
+        70%{
+            background-color: var(--cinza);
+            transform: translateY(0);
+        }
+        100%{
+            
+            top: 0;
+            transform: rotate(90deg);
+            background-color: var(--cinza)
+        }
+    }
+
+
+
+    /*Menu escondido*/
+.menu-link{
+    z-index: 1;
+    position:fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--preto);
+}
+.menu-link a{
+    font-family: var(--font);
+    font-weight: var(--bold);
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: 0.1s;
+
+}
+.menu-link .pagina{
+    border-bottom: solid 5px var(--vermelho);
+}
+.menu-link a:hover{
+    color: var(--vermelho);
+    border-bottom: solid 5px var(--vermelho);
+}
+.menu-link li{
+    list-style: none;
+    padding: 0.5rem;
+}
+.menu-link .text-footer{
+    font-family: var(--font);
+    font-weight: var(--regular);
+    color: var(--cinza);
+    font-size: 1.2rem;
+    position: relative;
+    top: 5rem;
+    display:grid;
+    text-align: center;
+    justify-content: center;
+}
+.menu-link ul{
+    position: relative;
+    top: 0rem;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.acao{
+    transition: 1s;
+}
+
+.acao:hover .hamburguer{
+    background-color: var(--branco);
+    animation: rotacaohamburguer 1s infinite forwards cubic-bezier(.84,-0.38,.74,1.68);
+    transition: 0.5s;
+}
+@keyframes rotacaohamburguer {
+    0% {
+
+        transform: rotate(45deg);
+    }
+
+    100% {
+
+        transform: rotate(405deg);
+    }
+}
+.acao:hover #menu-texto{
+    color: var(--branco) !important;
+    position: absolute;
+}
+.open{
+    display: flex;
+}
+
+
+
+/*Parte da Responsividade*************************************************************************************************************/
+
+
+@media screen and (max-width: 768px) {
+    body{
+        touch-action:pan-y;
+    }
+    header .menu{
+        z-index: 1;
+        position: absolute;
+        top: 1rem;
+        font-family: var(--font);
+        cursor:pointer;
+    }
+    header .menu #menu-texto{
+        position:absolute ;
+        top: 0.55rem;
+        font-weight: var(--bold);
+    }
+    .menu-link{
+        height: 100%;
+    }
+
+    .menu:hover #hamburguer2{
+        background-color: var(--preto);
+    }
+     .menu:hover #hamburguer1{
+        background-color: var(--preto);
+        top: 0.6rem;
+    }
+     .menu:hover #hamburguer3{
+        background-color: var(--preto);
+        top: -0.6rem;
+    }
+     .menu:hover #menu-texto{
+        color: var(--preto);
+        position: absolute;
+    }
+}
+@media screen and (max-width: 600px){
+    header{
+        height: 17vh;
+        background-color: var(--branco);
+    }
+    header .logo{
+        position: absolute;
+        left: 3vmax;
+        top: 1rem;
+    }
+    
+    header .logo .titularidade{
+        position: relative;
+        font-family: var(--font);
+        font-weight: var(--regular);
+        top: -0.7rem;
+        left: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    /*edicao da logo*/
+    
+    /*Background da logo*/
+    .logo-svg{
+        height: 3rem;
+    }
+    #Background-logo{
+           fill:var(--preto);
+           fill-opacity:1;
+           stroke: var(--preto);
+           stroke-width: 1rem;
+           width:1810.5179px;
+           height:365.66165px;
+           stroke-linecap:round;
+            stroke-linejoin:round;
+           animation: none;
+    }
+    /*Icone da logo*/
+    #icone-logo{
+        display:inline;
+        fill:var(--vermelho);
+        fill-opacity:1;
+        stroke:none;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-dasharray:none;
+        stroke-opacity:1
+    }
+    /*Nome meu logo*/
+    #nome-logo{
+        display:inline;
+        fill:var(--branco);
+        animation: none;
+    }
+    .logo-svg:hover #nome-logo{
+        fill: var(--branco);
+        animation: NomeLogo 1ms;
+    }
+    .logoaltera{
+        stroke: var(--branco)!important;
+    }
+    .titularidadeAltera{
+        color: var(--branco) !important;
+    }
+    /* Direita do header*/
+    
+    
+    
+    header .menu{
+        z-index: 1;
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        top: 1rem;
+        right: 8vw;
+        font-family: var(--font);
+        cursor:pointer;
+    }
+    .hamburguer{
+        position: absolute;
+        background-color: var(--preto);
+        display: block;
+        width: 35px;
+        height: 5px;
+        top: 1.2rem;
+        right: 0.5rem;
+        transition: 1s;
+    }
+    
+    #hamburguer1, #hamburguer2, #hamburguer3{
+            background-color: var(--preto);
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: 50ms;
+    }
+    
+    #hamburguer1{
+        top: 0.6rem;
+    }
+    #hamburguer3{
+        top: -0.6rem;
+    }
+    
+    header .menu #menu-texto{
+        position:absolute ;
+        top: 0.55rem;
+        left: 0.4rem;
+        font-weight: var(--bold);
+    }
+    .menu{
+        transition: 1s;
+    }
+    #menu-texto{
+        transition: 50ms;
+        display: none;
+    }
+    .menualtera{
+        left: 1rem !important;
+        color: var(--cinza) !important;
+    }
+    
+    
+    
+     .menu:hover #hamburguer2{
+        background-color: var(--preto);
+    }
+     .menu:hover #hamburguer1{
+        background-color: var(--preto);
+        top: 0.6rem;
+    }
+     .menu:hover #hamburguer3{
+        background-color: var(--preto);
+        top: -0.6rem;
+    }
+     .menu:hover #menu-texto{
+        color: var(--vermelho);
+        position: absolute;
+    }
+    .hamburguerAnime{
+        animation: humburguerAnime 1s alternate forwards cubic-bezier(1,.01,.72,.97);
+    }
+    
+    .BarraAnimationOpen{
+        animation: barra 1s alternate forwards cubic-bezier(1,.01,.72,.97);
+        
+    }
+    .BarraAfterAnimationOpen{
+        animation: barraAfter 0.7s alternate forwards cubic-bezier(1,.01,.72,.97);
+        
+    }
+    .BarraBeforeAnimationOpen{
+        animation: barraBefore 0.7s alternate forwards cubic-bezier(1,.01,.72,.97);
+        
+    }
+    
+    @keyframes humburguerAnime {
+        0%{background-color: var(--cinza)}
+        50%{
+            transform: rotate(-90deg);
+            background-color: var(--cinza)
+        }
+        80%{
+            transform: rotate(-45deg);
+            background-color: var(--cinza)
+        }
+        100%{
+            transform: rotate(-45deg);
+        }
+    }
+        @keyframes barra {
+            0%{background-color: var(--cinza)}
+            100%{
+                transform: rotate(0deg);
+                background-color: var(--cinza)
+             
+            }
+        }
+        @keyframes barraAfter {
+            0%{background-color: var(--cinza)}
+            10%{
+                
+                transform: translateY(15px);
+                top: 0;
+                background-color: var(--cinza);
+            }
+            70%{
+                background-color: var(--cinza);
+                transform: translateY(0);
+            }
+            100%{
+                
+                top: 0;
+                transform: rotate(-90deg);
+                background-color: var(--cinza)
+            }
+        }
+        @keyframes barraBefore{
+            0%{background-color: var(--cinza)}
+            10%{
+                background-color: var(--cinza);
+                transform: translateY(-15px);
+                top: 0;
+            }
+            70%{
+                background-color: var(--cinza);
+                transform: translateY(0);
+            }
+            100%{
+                
+                top: 0;
+                transform: rotate(90deg);
+                background-color: var(--cinza)
+            }
+        }
+    
+    
+    
+        /*Menu escondido*/
+    .menu-link{
+        touch-action: none;
+        position:fixed;
+        display: none;
+        height: 100%;
+        width: 100vw;
+        background-color: var(--preto);
+    }
+    .menu-link a{
+        font-family: var(--font);
+        font-weight: var(--bold);
+        color: var(--branco);
+        text-decoration: none;
+        font-size: 2rem;
+        transition: 0.001s;
+    
+    }
+    .menu-link .pagina{
+        border-bottom: solid 5px var(--vermelho);
+    }
+    .menu-link a:hover{
+        color: var(--vermelho);
+        border-bottom: solid 5px var(--vermelho);
+    }
+    .menu-link li{
+        list-style: none;
+        padding: 0.5rem;
+    }
+    .menu-link .text-footer{
+        font-family: var(--font);
+        font-weight: var(--regular);
+        color: var(--cinza);
+        font-size: 1.2rem;
+        position: relative;
+        top: 2rem;
+        display:grid;
+        text-align: center;
+        justify-content: center;
+    }
+    .menu-link ul{
+        position: relative;
+        top: 0rem;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .acao{
+        transition: 1s;
+    }
+    
+    .acao:hover .hamburguer{
+        animation: rotacaohamburguer 1s forwards cubic-bezier(.84,-0.38,.74,1.68);
+        transition: 0.5s;
+    }
+    @keyframes rotacaohamburguer {
+        0% {
+    
+            transform: rotate(45deg);
+        }
+    
+        100% {
+    
+            transform: rotate(405deg);
+        }
+    }
+    .acao:hover #menu-texto{
+        color: var(--branco) !important;
+        position: absolute;
+    }
+    .open{
+        display: flex;
+    }
+}
