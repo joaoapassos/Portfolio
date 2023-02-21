@@ -156,4 +156,7 @@ a{
         color: var(--branco);
         border-radius: 0vw;
     }
+    .imagens img{
+        height: 70vw;
+    }
 }
