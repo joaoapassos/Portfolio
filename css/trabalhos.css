@@ -156,6 +156,9 @@ a{
         color: var(--branco);
         border-radius: 0vw;
     }
+    .voltar{
+        width: 98vw;
+    }
     .imagens img{
         height: 70vw;
     }

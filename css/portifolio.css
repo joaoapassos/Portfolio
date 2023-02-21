@@ -161,21 +161,21 @@ a{
     color: var(--branco);
 }
 .projeto3{
-    background-image: url(../img/em-breve.jpg);
+    background-image: url(../img/Lhama-mia/10.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
-    background-position: center;
+    background-position: right;
     border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 .projeto3 p{
+    position: relative;
+    display: flex;
+    top: 16.5rem;
+    justify-content: center;
+    font-size: 1.5vw;
     color: var(--branco);
-    font-size: 3vw;
-    font-weight: var(--bold);
 }
 
 .overlay{
@@ -569,9 +569,9 @@ footer {
     .projeto3{
         margin-bottom: 0rem;
     }
-    .esconde{
+    /* .esconde{
         display: none;
-    }
+    } */
 
     .chamadaPcontato{
         align-items: baseline;
