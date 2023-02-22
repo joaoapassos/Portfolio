@@ -563,11 +563,11 @@ footer {
         margin: 0;
         height: 500px;
     }
-    .projeto3 p{
+    /* .projeto3 p{
         font-size: 8vw;
-    }
+    } */
     .projeto3{
-        margin-bottom: 0rem;
+        background-position: right;
     }
     /* .esconde{
         display: none;
