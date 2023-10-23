@@ -6,14 +6,14 @@ const btn = document.getElementById("btn");
 //   check();
 // })
 
-btn.addEventListener('click', function block(){
-  btn.addEventListener('click', (e) =>{
-    e.preventDefault()
-    check();
-  } )
-})
+// btn.addEventListener('click', function block(){
+//   btn.addEventListener('click', (e) =>{
+//     e.preventDefault()
+//     check();
+//   } )
+// })
 
-function check(){
+function verificarForms(){
   const nome = document.getElementById("nome");
   const email = document.getElementById("email");
   const mensagem = document.getElementById("mensagem");
@@ -74,6 +74,7 @@ function check(){
   })
 
   if(emailValid && nomeValid && mensagemValid){
-    btn.addEventListener('click')
+    const forms = document.querySelector('form');
+    forms.submit();
   }
 }
